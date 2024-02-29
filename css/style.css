@@ -1,0 +1,541 @@
+body {
+    --laranja: #FF6F1E;
+    --amarelo: #FFC90A;
+    --branco: #FFFFFF;
+    --preto: #000000;
+    --cinza-transparente: #cccc;
+    --verde: #00bb00;
+    font-family: sans-serif;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+.nav-link {
+    text-transform: uppercase;
+    color: var(--branco);
+}
+
+.nav-link:hover {
+    color: var(--laranja);
+    transition: color 500ms;
+}
+
+.nav-link-matricula {
+    border: solid 2px var(--laranja);
+    border-radius: 50px;
+    animation: pulse 0.7s infinite;
+    animation-direction: alternate;
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+    padding: 0.3em;
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-transform: scale(1);
+        -webkit-filter: brightness(100%);
+    }
+
+    100% {
+        -webkit-transform: scale(1.1);
+        -webkit-filter: brightness(200%);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        filter: brightness(100%);
+    }
+
+    100% {
+        transform: scale(1.1);
+        filter: brightness(200%);
+    }
+}
+
+.textTitulo {
+    text-transform: uppercase;
+    color: var(--laranja);
+    font-weight: bold;
+    text-shadow: 0 0 10px black;
+}
+
+.textSubtitulo {
+    text-transform: uppercase;
+    color: var(--laranja);
+    text-shadow: 0 0 10px black;
+}
+
+.textoh4 {
+    color: var(--laranja);
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardUm {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0.5em;
+    width: 33%;
+    background-color: #fff;
+}
+
+.image {
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.texth3 {
+    color: var(--laranja);
+}
+
+.cardDois {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.cardDois img {
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+.cardDois:hover .overlay {
+    opacity: 1;
+    transition: opacity 500ms;
+    cursor: pointer;
+}
+
+.buttonCardDois {
+    background-color: var(--laranja);
+    border: none;
+    padding: 10px;
+    color: white;
+    border-radius: 20px;
+}
+
+.buttonCardDois:hover {
+    background-color: var(--amarelo);
+    transition: background-color 500ms;
+}
+
+/* Treinadores  */
+
+.h5Treinadores {
+    text-decoration: none;
+    color: var(--branco);
+    text-shadow: 0 0 10px black;
+}
+
+.h2Treinadores {
+    color: var(--branco);
+}
+
+.fundoTreinadores {
+    background-image: url(../assets/fundoTreinadores.png);
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.textTreinadores {
+    color: var(--laranja);
+    text-shadow: 0 0 10px black;
+    font-weight: bold;
+}
+
+.paragTreinadores {
+    color: var(--branco);
+    text-shadow: 0 0 10px black;
+    font-weight: bold;
+}
+
+.imgTreinador {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+    border-radius: 30px;
+
+}
+
+.cardtest {
+    border: none;
+}
+
+.zoomNaImg {
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+}
+
+.zoomNaImg:hover {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+/* comentarios  */
+
+.estrelasAvaliacao {
+    padding-top: 1em;
+}
+
+.estrelas {
+    width: 7em;
+    padding: 0;
+    margin: 0;
+}
+
+hr {
+    border-color: var(--laranja);
+}
+
+
+/* Cadastro  */
+
+.divCadastro{
+    fill: var(--laranja);
+    margin-bottom: -5em;
+}
+
+.fundoCadastro {
+    background-color: var(--cinza-transparente);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-bottom: 2em;
+}
+
+.containerCard {
+    background-color: transparent;
+    padding: 30px;
+    border-radius: 4%;
+    box-shadow: 3px 3px 3px 3px #00000060;
+    width: 400px;
+}
+
+.cadastroForm input {
+    width: 100%;
+    padding: 5px 5px;
+    display: inline-block;
+    border: 0;
+    border-bottom: 2px solid var(--laranja);
+    background-color: transparent;
+    outline: none;
+    min-width: 180px;
+    font-size: 16px;
+    transition: all .3s ease-out;
+    border-radius: 0;
+
+}
+
+.cadastroForm {
+    position: relative;
+    padding-top: 1em;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.cadastroForm input:focus {
+    border-bottom: 2px solid var(--amarelo);
+}
+
+.cadastroForm label {
+    color: var(--preto);
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 1em;
+    transition: all .3s ease-out;
+}
+
+.cadastroForm input:focus+label,
+.cadastroForm input:valid+label {
+    margin-top: 0;
+    color: var(--preto)
+}
+
+.butonCadastro {
+    background-color: transparent;
+    border-color: var(--laranja);
+    color: var(--laranja);
+    padding: 0.5em;
+    margin-top: 2em;
+    border-radius: 0.2em;
+    cursor: pointer;
+    outline: none;
+    transition: all .4s ease-out;
+}
+
+.butonCadastro:hover {
+    background-color: var(--laranja);
+    color: #fff;
+    border-color: var(--amarelo);
+}
+
+.butonDiv {
+    display: flex;
+    justify-content: center;
+}
+
+.eyes {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    cursor: pointer;
+    color: var(--laranja);
+}
+
+.paragrafoCadastro {
+    text-align: center;
+    border-radius: 10em;
+    padding-top: 1em;
+}
+
+.whatsApp {
+    color: var(--verde);
+}
+
+#msgError {
+    text-align: center;
+    color: #ff0000;
+    background-color: #ffbbbb;
+    padding: 10px;
+    border-radius: 4px;
+    display: none;
+}
+
+#msgSuccess {
+    text-align: center;
+    color: #00bb00;
+    background-color: #bbffbe;
+    padding: 10px;
+    border-radius: 4px;
+    display: none;
+}
+
+/*FOOTER*/
+.divFooter {
+    overflow: hidden;
+    transform: rotate(180deg);
+}
+
+.divFooter svg {
+    width: calc(148% + 1.3px);
+    height: 181px;
+    background: var(--cinza-transparente);
+}
+
+.divFooter {
+    fill: var(--laranja);
+}
+
+.sectionFooter {
+    background-color: var(--laranja);
+    color: #fff;
+}
+
+.sectionFooter .footerContainer {
+    float: left;
+    width: 80%;
+    margin: 0 10%;
+    padding: 5em 0;
+}
+
+.footerContainer {
+    float: left;
+    width: 100%;
+}
+
+.footerContato {
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+.titleFooter{
+    border-bottom: 1px solid var(--branco);
+}
+
+.footerButon {
+    padding: 10px 12px;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 7px;
+
+}
+
+.footerCopy {
+    background-color: #fa8c4c;
+    width: 100%;
+    float: left;
+    padding: 1.5em 0em;
+}
+
+.footerCopy p {
+    font-size: 1em;
+    color: var(--branco);
+    height: 20px;
+}
+
+.footerCopy .m-b-footer {
+    margin-bottom: 0.5em;
+}
+
+.footerCopy .by {
+    font-size: 0.96em;
+}
+
+.footerCopy a {
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.footerCopy a:hover {
+    text-decoration: underline;
+    color: #313131
+}
+
+.botaoRedes {
+    padding: 10px 12px;
+    color: var(--branco);
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 7px;
+}
+
+.botaoRedes::before {
+    position: absolute;
+    bottom: 50%;
+    left: 0px;
+    width: 100%;
+    height: 1px;
+    background: #6098FF;
+    display: block;
+    -webkit-transform-origin: left top;
+    -ms-transform-origin: left top;
+    transform-origin: left top;
+    -webkit-transform: scale(0, 1);
+    -ms-transform: scale(0, 1);
+    transform: scale(0, 1);
+    -webkit-transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+    transition: transform 0.2s cubic-bezier(1, 0, 0, 1)
+}
+
+.botaoRedes:hover::before {
+    -webkit-transform-origin: right top;
+    -ms-transform-origin: right top;
+    transform-origin: right top;
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1)
+}
+
+.botaoRedes {
+    color: var(--branco);
+    text-align: center;
+    border: 1px solid var(--branco);
+    border-radius: 50px;
+    overflow: hidden !important;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    background: transparent !important;
+    z-index: 10;
+}
+
+.botaoRedes:hover {
+    border: 1px solid var(--branco);
+    color: #ffaeae !important;
+}
+
+.botaoRedes::before {
+    content: '';
+    width: 0%;
+    height: 100%;
+    display: block;
+    background: var(--verde);
+    position: absolute;
+    -ms-transform: skewX(-15deg);
+    -webkit-transform: skewX(-15deg);
+    transform: skewX(-15deg);
+    left: -10%;
+    opacity: 1;
+    top: 0;
+    z-index: -12;
+    -moz-transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
+    -o-transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
+    -webkit-transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
+    transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
+    box-shadow: 2px 0px 14px rgba(0, 0, 0, .6);
+}
+
+.botaoRedes::after {
+    content: '';
+    width: 0%;
+    height: 100%;
+    display: block;
+    background: var(--amarelo);
+    position: absolute;
+    -ms-transform: skewX(-15deg);
+    -webkit-transform: skewX(-15deg);
+    transform: skewX(-15deg);
+    left: -10%;
+    opacity: 0;
+    top: 0;
+    z-index: -15;
+    -webkit-transition: all .94s cubic-bezier(.2, .95, .57, .99);
+    -moz-transition: all .4s cubic-bezier(.2, .95, .57, .99);
+    -o-transition: all .4s cubic-bezier(.2, .95, .57, .99);
+    transition: all .4s cubic-bezier(.2, .95, .57, .99);
+    box-shadow: 2px 0px 14px rgba(0, 0, 0, .6);
+}
+
+.botaoRedes:hover::before,
+.botaoRedes:hover::before {
+    opacity: 1;
+    width: 120%;
+}
+
+.botaoRedes:hover::after,
+.botaoRedes:hover::after {
+    opacity: 1;
+    width: 150%;
+}
+
+/*Responsivo*/
+/*768PX BREAKPOINT*/
+@media (min-width:48em) {
+   
+}
